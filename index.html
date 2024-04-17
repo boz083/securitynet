@@ -42,47 +42,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
- -->
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -163,8 +122,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            We present SecurityNet as the first step towards conducting ML models’ security and privacy vulnerability evaluation on public models.
           </p>
           <p>
             While advanced machine learning (ML) models are deployed in numerous real-world applications, 
@@ -197,32 +155,55 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Concurrent Work. -->
+    <!-- Database. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3">Database</h2>
 
         <div class="content has-text-justified">
           <p>
             There's a lot of excellent work that was introduced around the same time as ours.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <!--/ Database. -->
+
+    <!-- Membership Inference. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Evaluations</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Thanks to SecurityNet, we can perform an extensive evaluation for model stealing, 
+            membership inference, and backdoor detection on a large set of public models, which, 
+            to the best of our knowledge, has not been done before. Our analyses confirm some results 
+            from previous works but on a much larger scale, discover some new insights, and show some 
+            of the previous results obtained from researchers’ self-trained models can vary on public models.
+          </p>
+          <p>
+            we find that the model stealing attack can perform especially poorly on certain datasets, 
+            such as CUB-200-2011, in contrast to target models (with the same architecture) trained on other datasets.
+            Furthermore, we demonstrate that the model stealing performance negatively correlates with the model’s target 
+            task performance and is too low to be effective on some modern high-performing models.
+          </p>
+          <p>
+            As for membership inference, we make a similar observation, as shown in previous works, that the attack performance 
+            positively correlates with the victim model’s overfit- ting level. Additionally, we find methods that perform well on 
+            experiment datasets do not guarantee similar performance on more difficult datasets. In contrast to previous work’s results, 
+            the MLP-based attack performs differently on models trained with data that contains a large number of classes (e.g., ImageNet-1k) 
+            when using different input methods.
+          </p>
+          <p>
+            Please refer to the paper for more detailed analysis including results on benchmark vs. security models and correlation with metadata.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Membership Inference. -->
 
   </div>
 </section>
