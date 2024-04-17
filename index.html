@@ -189,7 +189,7 @@
             <p>SecurityNet Statistics</p> -->
           <figure>
               <img src="./static/images/stats.png"/>
-              <figcaption>SecurityNet Statistics</figcaption>
+              <figcaption>Figure 1. SecurityNet statistics</figcaption>
           </figure>
           <p>
             we find that the model stealing attack can perform especially poorly on certain datasets, 
@@ -197,6 +197,10 @@
             Furthermore, we demonstrate that the model stealing performance negatively correlates with the model’s target 
             task performance and is too low to be effective on some modern high-performing models.
           </p>
+          <figure>
+              <img src="./static/images/modsteal1.png"/>
+              <figcaption>Figure 2. Model stealing performance across different datasets</figcaption>
+          </figure>
           <p>
             As for membership inference, we make a similar observation, as shown in previous works, that the attack performance 
             positively correlates with the victim model’s overfit- ting level. Additionally, we find methods that perform well on 
@@ -204,6 +208,14 @@
             the MLP-based attack performs differently on models trained with data that contains a large number of classes (e.g., ImageNet-1k) 
             when using different input methods.
           </p>
+          <figure>
+              <img src="./static/images/member1.png"/>
+              <figcaption>Figure 3. Membership inference performance across different datasets</figcaption>
+          </figure>
+          <figure>
+              <img src="./static/images/member2.png"/>
+              <figcaption>Figure 4. Membership inference performance across different attack methods</figcaption>
+          </figure>
           <p>
             Please refer to the paper for more detailed analysis including results on benchmark vs. security models and correlation with metadata.
           </p>
